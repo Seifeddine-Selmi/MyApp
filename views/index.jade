@@ -1,5 +1,12 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+  section.jumbotron
+    .container
+      h1 Welcome to my app #{title} !
+      p.lead
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida sollicitudin ligula. Vestibulum at
+        | consectetur nulla. Ut id sagittis erat. Nulla vestibulum hendrerit metus at pulvinar. Etiam at posuere justo, ac
+        | iaculis risus. Nulla pulvinar, mi nec bibendum dignissim, libero turpis congue odio, adipiscing interdum arcu
+        | elit a metus. Nulla eget dolor a ipsum tincidunt tincidunt id nec quam.
+block footer
+  include footer

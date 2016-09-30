@@ -1,0 +1,29 @@
+extends layout
+block content
+    section.jumbotron
+        .container
+            h1 Welcome to #{title} !
+            #{name}
+    section.container
+       if name
+           .alert.alert-success.alert-dismissable
+                button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
+                strong Well done!
+                |  Your message is sent to
+                b
+                 |  #{name}
+                |  Thank You!
+       form(role='form', action='/contact', method='post')
+           .form-group
+               label(for='email') Email
+               input#email.form-control(type='email', name='email', placeholder='Enter email')
+           .form-group
+                label(for='name') Name
+                input#name.form-control(type='text', name='name', placeholder='Enter name')
+           .form-group
+                label(for='msg') Message
+                textarea#msg.form-control(name='msg', rows='3')
+           button.btn.btn-default(type='submit') Submit
+block footer
+   include footer
+
